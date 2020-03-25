@@ -3,6 +3,16 @@ var Queue = function() {
   // but try not not reference your old code in writing the new style.
 };
 
-var queueMethods = {};
+var queueMethods = {
+  Queue.prototype.enqueue = function(value) {
+    return this.
+  };,
+  Queue.prototype.dequeue = function() {
+
+  };,
+  Queue.prototype.size = function() {
+    return this.size()
+  };
+};
 
 
