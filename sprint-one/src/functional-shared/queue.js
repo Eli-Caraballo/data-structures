@@ -5,6 +5,7 @@ var Queue = function() {
     storage: {},
     incrementer: 0,
     decrementer: 0,
+    inQueue: 0
   };
   extend(someInstance, queueMethods);
   return someInstance;
@@ -20,6 +21,7 @@ var queueMethods = {
   enqueue: function(value) {
     this.storage[this.incrementer] = value;
     this.incrementer++;
+    this.inQueue++;
   },
 
   dequeue: function() {
@@ -28,13 +30,13 @@ var queueMethods = {
       value = this.storage[this.decrementer];
       delete this.storage[this.decrementer];
       this.decrementer++;
+      this.inQueue--;
     }
     return value;
   },
 
   size: function() {
-    var arr = Object.keys(this.storage);
-    return arr.length;
+    return this.inQueue;
   }
 };
 
