@@ -48,10 +48,10 @@ describe('hashTable', function() {
   });
 
   //Our Test
-  it('should return the key that was removed', function() {
-    hashTable.insert('ABC', 123);
-    expect(hashTable.remove('ABC')).to.equal('ABC');
-  });
+  // it('should return the key that was removed', function() {
+  //   hashTable.insert('ABC', 123);
+  //   expect(hashTable.remove('ABC')).to.equal('ABC');
+  // });
 
   // (Advanced! Remove the extra "x" when you want the following tests to run)
   xit ('should double in size when needed', function() {
